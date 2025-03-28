@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("background2.png"); 
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#game {
+    height: 500px;
+    width: 400px;
+    border-radius: 12px;
+    border: 3px solid #f8ebf4;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    position: relative;
+}
+
+#block {
+    width: 50px;
+    height: 500px;
+    background-color: #0c0a78; 
+    position: relative;
+    left: 200px;
+    animation: block 2s linear infinite;
+    border-radius: 8px;
+}
+
+@keyframes block {
+    0% { left: 400px; }
+    100% { left: -50px; }
+}
+
+#hole {
+    height: 150px;
+    width: 50px;
+    background-color: #d41212; 
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s linear infinite;
+    border-radius: 8px;
+}
+
+#bird {
+    position: fixed;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+}
+
+#bird img {
+    height: 50px;
+    width: 50px;
+}
+
+#result {
+    height: 200px;
+    width: 500px;
+    margin: 5rem auto;
+    border: 2px solid rgb(247, 243, 247);
+    border-radius: 20px;
+    display: none;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35);
+}
+
+#btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #19cbdc, #0a8187); /* Light Blue Gradient */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btn:hover {
+    background: linear-gradient(to right, #34c863, #0b6613); /* Slightly darker blue */
+    transform: scale(1.08);
+}
+
+#text {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #263238;
+}
